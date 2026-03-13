@@ -27,9 +27,29 @@ o	Ground (GND) connection
 6.	Repeat the process continuously.
 
 
-## Program:
-
+### Program:
+``
+#include <reg51.h>
+void delay();
+void main()
+{
+	P2=0X00;
+	while(1)
+{
+		P2=0Xff;
+		delay();
+		P2=0x00;
+		delay();
+}
+}
+void delay()
+{
+	unsigned int v1;
+	for(v1=0;v1<20000;v1++);
+}
+``
 ## Output:
+
 
 
 ## Result:
